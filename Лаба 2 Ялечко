@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int seconds, hours, minutes, remaining_seconds;
+
+    printf("Введіть час в секундах: ");
+    scanf("%d", &seconds);
+
+    // Обчислюємо кількість годин,хвилин та залишкових секунд
+    hours = seconds / 3600;
+    remaining_seconds = seconds % 3600;
+    minutes = remaining_seconds / 60;
+    remaining_seconds = remaining_seconds % 60;
+    // Виводимо результат у зручному форматі
+    printf("Час: %d годин,%d хвилин,%d секунд\n", hours, minutes, remaining_seconds);
+
+    return 0;
